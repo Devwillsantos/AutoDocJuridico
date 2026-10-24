@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisador de Documentos Jurídicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Analisador de Documentos Jurídicos</h2>
+    <p>Faça o upload de um contrato PDF para testar a leitura automatizada.</p>
+
+    <div class="upload-box">
+      <input type="file" id="arquivoPdf" accept=".pdf">
+      <br>
+      <button id="btnAnalisar">Analisar Documento</button>
+    </div>
+
+    <h3>Resultado da Leitura:</h3>
+    <div id="resultado" class="resultado-container">
+      <p>Aguardando o envio do arquivo...</p>
+    </div>
+
+    <!-- Estrutura de Cartões que o script.js preenche -->
+    <div id="cardResultado" class="card-grid" style="display: none;">
+      <div class="card">
+        <h4>Informações do Arquivo</h4>
+        <p><strong>Nome:</strong> <span id="resNome">-</span></p>
+        <p><strong>Páginas:</strong> <span id="resPaginas">-</span></p>
+      </div>
+
+      <div class="card">
+        <h4>Detalhes do Contrato</h4>
+        <p><strong>Tipo:</strong> <span id="resTipo">-</span></p>
+        <p><strong>Valor:</strong> <span id="resValor">-</span></p>
+      </div>
+
+      <div class="card full-width">
+        <h4>Partes Envolvidas</h4>
+        <ul id="resPartes"></ul>
+      </div>
+
+      <div class="card full-width">
+        <h4>Resumo das Cláusulas</h4>
+        <p id="resResumo">-</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
